@@ -1,0 +1,17 @@
+<img id="img1" src="" height="100px" width="100px" border="solid 1px">
+    <input id="inputFile1" type="file">
+
+    <script>
+        window.addEventListener('load', init, false);
+
+        function init() {
+            var inputFile = document.querySelector('#inputFile1');
+            inputFile.addEventListener('change', mostrarImagen, false);
+        }
+
+        function mostrarImagen(e) {
+            var img = document.querySelector('#img1');
+            var inputFile = document.querySelector('#inputFile1');
+            img.src = inputFile.value;
+        }
+    </script>
